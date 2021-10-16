@@ -7,7 +7,9 @@ class ContaPoupanca(
 ) {
 
     override fun saca(valor: Double) {
-        super.saca(valor)
+        if (saldo >= valor) {
+            saldo -= valor
+        }
     }
 
 }
