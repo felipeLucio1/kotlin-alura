@@ -3,9 +3,13 @@ abstract class FuncionarioAdmin(
     cpf: String,
     private val salario: Double,
     private val senha: Int
-    ) {
+): Funcionario(
+    nome = nome,
+    cpf = cpf,
+    salario = salario
+) {
 
-    open fun bonificacao(): Double = salario * 0.1
+    override fun bonificacao(): Double = salario * 0.1
 
     fun autentica(senha: Int): Boolean {
         if (this.senha == senha) {

@@ -1,4 +1,9 @@
 fun main() {
+    testaFuncionario()
+    testaFuncionarioAdmin()
+}
+
+fun testaFuncionarioAdmin() {
     val sistema = SistemaInterno()
 
     val gerente = Gerente(
