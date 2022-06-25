@@ -23,5 +23,5 @@ fun testaAutenticacao() {
 
     sistema.entrar(gerente, 1111)
     sistema.entrar(diretor, 2222)
-//    sistema.entrar(cliente)
+    sistema.entrar(cliente, 3332)
 }
