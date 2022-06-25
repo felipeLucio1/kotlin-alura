@@ -1,15 +1,16 @@
 class ContaPoupanca(
     override var titular: String,
-    override val numero: Int
+    override val numero: Int,
+    var remuneracao: Double
 ) : Conta(
     titular = titular,
     numero = numero
 ) {
-
-    override fun saca(valor: Double) {
-        if (saldo >= valor) {
-            saldo -= valor
-        }
+    private fun remuneraPoupanca(): Double {
+        return this.saldo*remuneracao
     }
 
+    fun dapositaRemuneracao() {
+        this.deposita(remuneraPoupanca())
+    }
 }

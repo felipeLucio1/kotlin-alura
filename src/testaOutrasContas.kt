@@ -1,9 +1,11 @@
 fun testaOutrasContas() {
     val contaPoupanca = ContaPoupanca(
         "Felipe",
-        1000
+        1000,
+        0.005
     )
     contaPoupanca.deposita(1000.0)
+    contaPoupanca.dapositaRemuneracao()
 
     val contaCorrente = ContaCorrente(
         "Rayane",
